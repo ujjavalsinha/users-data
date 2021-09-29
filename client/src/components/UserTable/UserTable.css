@@ -1,0 +1,36 @@
+.UserTable{ 
+    width : 100vw;
+}
+
+
+.UserTable .table-container{
+    overflow-x: auto;
+}
+
+.UserTable table {
+    table-layout: auto; 
+    overflow-x: auto;
+    padding : 20px;
+    
+}
+
+.UserTable .cell{
+    border : 1px solid grey;
+    margin : 0;
+    font-size : 12px;
+    text-align : left !important;
+    padding : 5px;
+    
+}
+
+.UserTable table .address-cell{
+    white-space: nowrap;
+}
+
+.UserTable th{
+    border : 1px solid grey;
+    padding : 10px;
+    font-size : 13px;
+    background-color : rgb(4, 4, 250);
+    color : white;
+}
