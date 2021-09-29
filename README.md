@@ -2,7 +2,7 @@
 # Client folder has the React application code
 
 ### `npm install` 
-Navigate to client folder and run 'npm install' command.
+Navigate to `client` folder and run 'npm install' command.
 All the packages in the package.json will be downloaded.
 
 ### `npm start`
