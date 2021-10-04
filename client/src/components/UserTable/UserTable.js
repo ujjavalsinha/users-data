@@ -22,6 +22,7 @@ const UserTable = () => {
         fetchUserData()
     },[])
     
+
     const filterData = data => {
         for(let col in data){
             if(data[col].toString().match(searchInput)){
@@ -43,16 +44,15 @@ const UserTable = () => {
                             return <th>{columnName.toUpperCase()}</th>
                         })}
                     </tr>
-                    {userData.map(data => {
-                        if(searchInput === '' || filterData(data)){
+                    {userData.filter(row => filterData(row)).map(data => {
                             return (
-                            <tr key={data.id}>
-                                {Object.keys(data).map((key) => {
-                                    const tdClassName = key === 'address' ? 'address-cell cell' : 'cell'
-                                    return <td className={tdClassName}>{data[key]}</td>
-                                })}
-                            </tr>)
-                        }
+                                <tr key={data.id}>
+                                    {Object.keys(data).map((key) => {
+                                        const tdClassName = key === 'address' ? 'address-cell cell' : 'cell'
+                                        return <td className={tdClassName}>{data[key]}</td>
+                                    })}
+                                </tr>)
+                        
                     })}
                 </table>
             </div>
